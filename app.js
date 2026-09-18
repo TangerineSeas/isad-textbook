@@ -224,3 +224,39 @@
     for(var i = 0; i < gs.length; i++) buildCarousel(gs[i]);
   });
 })();
+/* ===== 更换主题 ===== */
+(function () {
+  var root = document.documentElement;          // <html> 元素
+  var btn  = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  var THEMES = ['default', 'ao3', 'dark'];      // 主题列表，可自行增删
+  var LABELS = {
+    'default': '更换主题',
+    'ao3':     'AO3 草莓',
+    'dark':    '深色'
+  };
+
+  // 读取上次保存的主题
+  var saved = localStorage.getItem('isad-theme') || 'default';
+  applyTheme(saved);
+
+  btn.addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') || 'default';
+    var idx = THEMES.indexOf(cur);
+    var next = THEMES[(idx + 1) % THEMES.length];
+    applyTheme(next);
+    localStorage.setItem('isad-theme', next);
+  });
+
+  function applyTheme(name) {
+    if (name === 'default') {
+      root.removeAttribute('data-theme');
+    } else {
+      root.setAttribute('data-theme', name);
+    }
+    // 更新按钮文字
+    var txt = btn.querySelector('.theme-text');
+    if (txt) txt.textContent = LABELS[name] || '更换主题';
+  }
+})();
