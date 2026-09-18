@@ -108,7 +108,7 @@
   var btn  = document.getElementById('theme-toggle');
   if (!btn) return;
   var THEMES = ['default', 'ao3', 'dark'];
-  var LABELS = { 'default': '更换主题', 'ao3': 'AO3 草莓', 'dark': '浅海' };
+  var LABELS = { 'default': '更换主题', 'ao3': '草莓', 'dark': '浅海' };
   var saved = localStorage.getItem('isad-theme') || 'default';
   applyTheme(saved);
   btn.addEventListener('click', function () {
