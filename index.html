@@ -103,21 +103,26 @@
 <div id="termtip" data-page-node-id="y3jnRMflV587PeJaDe8iLq"></div>
 <script src="app.js"></script>
   <script>
-(function(){
+(function () {
   var root = document.documentElement;
-  var btn = document.querySelector('.theme-toggle');
-  var saved = localStorage.getItem('theme');
-  if (saved) root.setAttribute('data-theme', saved);
-  if (btn) {
-    btn.addEventListener('click', function(){
-      var cur = root.getAttribute('data-theme');
-      var next = cur === 'dark' ? '' : 'dark';
-      if (next) root.setAttribute('data-theme', next);
-      else root.removeAttribute('data-theme');
-      localStorage.setItem('theme', next);
-      var text = btn.querySelector('.theme-text');
-      if (text) text.textContent = next ? '浅色' : '深色';
-    });
+  var btn  = document.getElementById('theme-toggle');
+  if (!btn) return;
+  var THEMES = ['default', 'ao3', 'dark'];
+  var LABELS = { 'default': '更换主题', 'ao3': 'AO3 草莓', 'dark': '浅海' };
+  var saved = localStorage.getItem('isad-theme') || 'default';
+  applyTheme(saved);
+  btn.addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme') || 'default';
+    var idx = THEMES.indexOf(cur);
+    var next = THEMES[(idx + 1) % THEMES.length];
+    applyTheme(next);
+    localStorage.setItem('isad-theme', next);
+  });
+  function applyTheme(name) {
+    if (name === 'default') { root.removeAttribute('data-theme'); }
+    else { root.setAttribute('data-theme', name); }
+    var txt = btn.querySelector('.theme-text');
+    if (txt) txt.textContent = LABELS[name] || '更换主题';
   }
 })();
 </script>
