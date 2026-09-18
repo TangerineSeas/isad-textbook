@@ -364,3 +364,36 @@ details.fold[open] summary{border-bottom:1px solid var(--line); margin-bottom:10
   .pptgrid.ppt-enhanced > figure{ display:block; }
   .ppt-carousel{ display:none !important; }
 }
+
+/* ===== 右上角更换主题按钮 ===== */
+.theme-toggle{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  margin-left:16px;
+  padding:5px 12px;
+  font-size:13px;
+  font-family:inherit;
+  color:#eaf4f6;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:20px;
+  cursor:pointer;
+  transition:background .18s, border-color .18s, color .18s;
+  vertical-align:middle;
+}
+.theme-toggle:hover{
+  background:rgba(255,255,255,.24);
+  border-color:#fff;
+  color:#fff;
+}
+.theme-toggle .theme-icon{
+  font-size:14px;
+  line-height:1;
+}
+
+/* 移动端可以把文字藏起来，只留图标 */
+@media (max-width:780px){
+  .theme-toggle .theme-text{ display:none; }
+  .theme-toggle{ padding:5px 9px; margin-left:8px; }
+}
