@@ -420,179 +420,149 @@ html[data-theme="ao3"] .theme-toggle{
   background:rgba(243,224,218,.12);
 }
 
-/* ===== 主题：深海蓝（AO3 深蓝 + 浅蓝） ===== */
+/* ===== 主题：浅蓝海洋 ===== */
 html[data-theme="dark"]{
-  --dark:#0b2344;        /* 深海蓝，对应 AO3 #0b2344 */
+  --dark:#1B3A5C;        /* 深海蓝 */
   --teal:#2E6F9E;        /* 主蓝 */
   --teal2:#4A9FD4;       /* 亮蓝 */
-  --accent:#6EC6E8;      /* 浅蓝强调（原橙） */
+  --accent:#6EC6E8;      /* 浅蓝强调 */
   --gold:#A8D8EA;        /* 海沫色 */
-  --light:#0b2344;       /* 深蓝底 */
-  --card:#152F51;        /* 卡片深蓝（对应 AO3 #152F51） */
-  --ink:#DAECFF;         /* 浅蓝正文，对应 AO3 #DAECFF */
-  --mute:#8AA6BC;        /* 弱化文字 */
-  --line:#2A4A6B;        /* 边框深蓝 */
-  --ok:#3FC27A;
-  --bad:#C0616A;
+  --light:#EAF4FB;       /* 浅蓝底 */
+  --card:#FFFFFF;        /* 卡片白 */
+  --ink:#1E3A4F;         /* 正文深蓝 */
+  --mute:#6B8DA8;        /* 弱化文字 */
+  --line:#C5DDEB;        /* 边框 */
+  --ok:#3C9E8F;          /* 海绿 */
+  --bad:#C0616A;         /* 珊瑚红 */
 }
-
 html[data-theme="dark"] body{
-  background:#0b2344;
-  color:#DAECFF;
+  background:var(--light);
+  color:var(--ink);
+  font-family:"微软雅黑","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
 }
-
-/* 顶部条与 hero 深蓝渐变 */
 html[data-theme="dark"] .topbar,
 html[data-theme="dark"] .hero{
-  background:linear-gradient(120deg,#08182E,#0b2344,#152F51);
+  background:linear-gradient(120deg,#1B3A5C,#2E6F9E,#4A9FD4);
+  color:#fff;
 }
-
-/* 卡片类统一深蓝底 + 浅蓝字 */
+html[data-theme="dark"] .topbar nav a{
+  color:#EAF4FB;
+}
+html[data-theme="dark"] .topbar nav a:hover{
+  color:#fff;
+}
 html[data-theme="dark"] .ch-card,
 html[data-theme="dark"] .feature,
 html[data-theme="dark"] .card,
 html[data-theme="dark"] .figure,
-html[data-theme="dark"] .summary,
-html[data-theme="dark"] .casebox,
-html[data-theme="dark"] .kbcase,
-html[data-theme="dark"] .termbox,
-html[data-theme="dark"] .expext,
-html[data-theme="dark"] .labtask,
-html[data-theme="dark"] .recframe .rec-card,
-html[data-theme="dark"] .callout,
-html[data-theme="dark"] details.fold,
-html[data-theme="dark"] .qr-box,
-html[data-theme="dark"] .video-card,
-html[data-theme="dark"] .readbox,
-html[data-theme="dark"] .listbox,
-html[data-theme="dark"] .wxfig{
-  background:#152F51;
-  color:#DAECFF;
-  border-color:#2A4A6B;
+html[data-theme="dark"] .summary{
+  background:var(--card);
+  color:var(--ink);
+  border-color:var(--line);
 }
-html[data-theme="dark"] .wxfig figcaption{
-  background:#0b2344;
-  color:#DAECFF;
-  border-top-color:#2A4A6B;
-}
-html[data-theme="dark"] .wxfig figcaption strong{ color:#DAECFF; }
-
-/* 侧栏 */
 html[data-theme="dark"] .side{
-  background:#0b2344;
-  border-right-color:#2A4A6B;
+  background:#fff;
+  border-right-color:var(--line);
 }
 html[data-theme="dark"] .side a{
-  color:#DAECFF;
+  color:var(--ink);
 }
 html[data-theme="dark"] .side a:hover{
-  background:#152F51;
+  background:var(--light);
 }
-html[data-theme="dark"] .side a.cur{
-  background:#2E6F9E;
-  color:#fff;
-}
-
-/* 正文文字与标题 */
-html[data-theme="dark"] .content h1,
-html[data-theme="dark"] .content h2,
-html[data-theme="dark"] .content h3,
-html[data-theme="dark"] .summary h4,
-html[data-theme="dark"] .section-title{
-  color:#DAECFF;
-}
-html[data-theme="dark"] .content p,
-html[data-theme="dark"] .content li{
-  color:#DAECFF;
-}
-
-/* 提示条 / note */
 html[data-theme="dark"] .note{
-  background:#152F51;
-  color:#8AA6BC;
-  border-color:#2A4A6B;
+  background:var(--card);
+  color:var(--mute);
+  border-left-color:var(--gold);
 }
-
-/* 表格 */
-html[data-theme="dark"] .gtable th,
-html[data-theme="dark"] th{
-  background:#2E6F9E;
-  color:#DAECFF;
-}
-html[data-theme="dark"] .gtable td,
-html[data-theme="dark"] td,
-html[data-theme="dark"] table{
-  border-color:#2A4A6B;
-  color:#DAECFF;
-}
-html[data-theme="dark"] .gtable tbody tr:nth-child(even){ background:#152F51; }
-html[data-theme="dark"] .gtable tbody tr:hover{ background:#1C3D62; }
-
-/* 链接 */
-html[data-theme="dark"] a{ color:#6EC6E8; }
-html[data-theme="dark"] a:hover{ color:#A8D8EA; }
-
-/* 按钮 */
-html[data-theme="dark"] .btn{
-  background:#2E6F9E;
-  color:#fff;
-}
-html[data-theme="dark"] .btn:hover{ background:#4A9FD4; }
-html[data-theme="dark"] .btn.ghost{
-  background:transparent;
-  color:#6EC6E8;
-  border-color:#6EC6E8;
-}
-
-/* 主题切换按钮 */
 html[data-theme="dark"] .theme-toggle{
-  color:#DAECFF;
-  border-color:rgba(218,236,255,.45);
-  background:rgba(218,236,255,.12);
+  color:#EAF4FB;
+  border-color:rgba(234,244,251,.45);
+  background:rgba(234,244,251,.12);
 }
 html[data-theme="dark"] .theme-toggle:hover{
-  background:rgba(218,236,255,.24);
-  border-color:#DAECFF;
-  color:#DAECFF;
+  background:rgba(234,244,251,.24);
+  border-color:#fff;
+  color:#fff;
 }
 
-/* 深海主题下的海洋元素（保留并更亮） */
-html[data-theme="dark"] .section-title::before,
+/* ===== 浅蓝海洋主题 · 海洋小元素装饰 ===== */
+/* 标题两侧加小波浪符号 */
+html[data-theme="dark"] .section-title::before{
+  content:"𓆝 ";
+  color:var(--teal2);
+  font-size:.9em;
+}
 html[data-theme="dark"] .section-title::after{
-  color:#6EC6E8;
+  content:" 𓆟";
+  color:var(--teal2);
+  font-size:.9em;
 }
+/* 内容区 h2 前面加小水母 */
 html[data-theme="dark"] .content h2::before{
-  color:#6EC6E8;
+  content:"𓇼 ";
+  color:var(--accent);
+  font-size:.9em;
 }
+/* 正文首段前加小气泡 */
 html[data-theme="dark"] .content p.lead::before{
-  color:#4A9FD4;
+  content:"◦ ";
+  color:var(--teal2);
+  font-weight:700;
 }
+/* 侧栏当前项加小波浪 */
 html[data-theme="dark"] .side a.cur::before{
-  color:#A8D8EA;
+  content:"𓆜 ";
+  font-size:.9em;
 }
+/* 按钮后加小海浪 */
 html[data-theme="dark"] .btn::after{
-  color:#A8D8EA;
+  content:" 𓆝";
+  font-size:.85em;
+  opacity:.85;
 }
+html[data-theme="dark"] .btn.ghost::after{
+  content:" 𓆝";
+  color:var(--teal);
+}
+/* 顶部条加海洋气泡背景 */
+html[data-theme="dark"] .hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(255,255,255,.18) 0 6px, transparent 7px),
+    radial-gradient(circle at 30% 70%, rgba(255,255,255,.14) 0 10px, transparent 11px),
+    radial-gradient(circle at 78% 30%, rgba(255,255,255,.12) 0 8px, transparent 9px),
+    radial-gradient(circle at 90% 80%, rgba(255,255,255,.16) 0 5px, transparent 6px),
+    radial-gradient(circle at 55% 15%, rgba(255,255,255,.10) 0 12px, transparent 13px);
+  background-repeat:no-repeat;
+  pointer-events:none;
+}
+html[data-theme="dark"] .hero{
+  position:relative;
+  overflow:hidden;
+}
+html[data-theme="dark"] .hero h1,
+html[data-theme="dark"] .hero p,
+html[data-theme="dark"] .hero .kicker{
+  position:relative;
+}
+/* 卡片悬停时浮现小水母 */
 html[data-theme="dark"] .ch-card:hover::before{
-  color:#6EC6E8;
+  content:"𓇼";
+  position:absolute;
+  bottom:8px; right:12px;
+  color:var(--accent);
+  font-size:16px;
+  opacity:.7;
 }
-html[data-theme="dark"] .ocean-footer{
-  background:
-    linear-gradient(180deg, transparent 0%, rgba(74,159,212,.18) 40%, rgba(46,111,158,.30) 100%);
-  border-top-color:#2A4A6B;
-  color:#8AA6BC;
-}
-html[data-theme="dark"] .ocean-footer::before{
-  color:#6EC6E8;
-}
-
-/* 选中文本 */
+/* 选中文本颜色改为海蓝 */
 html[data-theme="dark"] ::selection{
-  background:#6EC6E8;
-  color:#0b2344;
+  background:var(--accent);
+  color:var(--dark);
 }
-
-/* 滚动条 */
-html[data-theme="dark"] ::-webkit-scrollbar-track{ background:#0b2344; }
-html[data-theme="dark"] ::-webkit-scrollbar-thumb{ background:#2E6F9E; }
-html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover{ background:#4A9FD4; }
+/* 滚动条（Webkit 浏览器） */
+html[data-theme="dark"] ::-webkit-scrollbar{ width:10px; height:10px; }
+html[data-theme="dark"] ::-webkit-scrollbar-track{ background:var(--light); }
+html[data-theme="dark"] ::-webkit-scrollbar-thumb{ background:var(--teal2); border-radius:8px; }
+html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover{ background:var(--teal); }
