@@ -397,3 +397,65 @@ details.fold[open] summary{border-bottom:1px solid var(--line); margin-bottom:10
   .theme-toggle .theme-text{ display:none; }
   .theme-toggle{ padding:5px 9px; margin-left:8px; }
 }
+/* ===== 主题：AO3 草莓 ===== */
+html[data-theme="ao3"]{
+  --dark:#6C0E1E; --teal:#842033; --teal2:#9E2F45; --accent:#B03050;
+  --gold:#C97B4A; --light:#F3E0DA; --card:#FBF2EF; --ink:#6C0E1E;
+  --mute:#8A4A56; --line:#D8C1BE; --ok:#842033; --bad:#9E2F45;
+}
+html[data-theme="ao3"] body{
+  font-family:"Comic Neue","Comic Sans MS","微软雅黑","PingFang SC",system-ui,sans-serif;
+}
+html[data-theme="ao3"] .topbar{
+  background:linear-gradient(120deg,#6C0E1E,#842033);
+}
+html[data-theme="ao3"] .hero{
+  background:linear-gradient(120deg,#6C0E1E,#842033);
+}
+html[data-theme="ao3"] .theme-toggle{
+  color:#F3E0DA;
+  border-color:rgba(243,224,218,.45);
+  background:rgba(243,224,218,.12);
+}
+
+/* ===== 主题：深色 ===== */
+html[data-theme="dark"]{
+  --dark:#0B1F26; --teal:#1FA3B8; --teal2:#3FC2D6; --accent:#F27A4E;
+  --gold:#E0A82E; --light:#0E1F26; --card:#132B33; --ink:#E6F2F5;
+  --mute:#9FB8BF; --line:#1F3A43; --ok:#3FC27A; --bad:#F27A4E;
+}
+html[data-theme="dark"] body{
+  background:var(--light);
+  color:var(--ink);
+}
+html[data-theme="dark"] .topbar,
+html[data-theme="dark"] .hero{
+  background:linear-gradient(120deg,#08171C,#0E2F3A);
+}
+html[data-theme="dark"] .ch-card,
+html[data-theme="dark"] .feature,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .figure,
+html[data-theme="dark"] .summary{
+  background:var(--card);
+  color:var(--ink);
+}
+html[data-theme="dark"] .side{
+  background:#0B1F26;
+  border-right-color:var(--line);
+}
+html[data-theme="dark"] .side a{
+  color:var(--ink);
+}
+html[data-theme="dark"] .side a:hover{
+  background:#132B33;
+}
+html[data-theme="dark"] .note{
+  background:var(--card);
+  color:var(--mute);
+}
+html[data-theme="dark"] .theme-toggle{
+  color:#E6F2F5;
+  border-color:rgba(230,242,245,.45);
+  background:rgba(230,242,245,.12);
+}
